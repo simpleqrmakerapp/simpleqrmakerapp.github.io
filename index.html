@@ -1,20 +1,153 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rashad Shirizada — Contact</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple QR Maker — Contact</title>
+  <meta name="description" content="Contact page for Simple QR Maker by Rashad Shirizada." />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Simple QR Maker — Contact">
+  <meta property="og:description" content="Get in touch and find the privacy policy and app-ads.txt.">
+  <meta property="og:url" content="https://simpleqrmakerapp.github.io/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2224%22 x=%223%22 font-size=%2224%22>🔲</text></svg>">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 40px; max-width: 600px; margin: auto; }
-    h1 { font-size: 28px; }
-    a { color: #007aff; text-decoration: none; }
+    :root { color-scheme: light dark; --bg: #f7f7f8; --ink: #0b0b0c; --muted: #646568; --card: #ffffffcc; --border: color-mix(in oklab, var(--ink) 10%, transparent); }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0b0b0c; --ink:#f4f6f8; --muted:#b7bbc2; --card:#141416cc; --border: color-mix(in oklab, var(--ink) 14%, transparent); }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: var(--ink);
+      background:
+        radial-gradient(1200px 800px at 10% -10%, #a5b4fc33, transparent 60%),
+        radial-gradient(900px 600px at 120% 10%, #f0abfc33, transparent 60%),
+        radial-gradient(900px 700px at -20% 120%, #34d39933, transparent 60%),
+        var(--bg);
+    }
+    .wrap {
+      min-height: 100%; display: grid; place-items: center; padding: 40px 16px;
+    }
+    .card {
+      width: min(880px, 96vw);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      backdrop-filter: saturate(140%) blur(8px);
+      -webkit-backdrop-filter: saturate(140%) blur(8px);
+      background: var(--card);
+      box-shadow: 0 10px 40px rgba(0,0,0,.08);
+      overflow: clip;
+    }
+    header { padding: 28px 26px 6px; }
+    .brand {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .logo {
+      width: 44px; height: 44px; display:grid; place-items:center;
+      border-radius: 12px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff22, #00000011);
+      font-size: 22px;
+    }
+    h1 { margin: 0; font-size: 28px; letter-spacing: -.2px; }
+    .sub { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+    .grid {
+      display: grid; gap: 18px; padding: 18px 26px 26px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .panel {
+      grid-column: span 8;
+      border: 1px solid var(--border); border-radius: 16px; padding: 18px; background: color-mix(in oklab, var(--card) 85%, transparent);
+    }
+    .side {
+      grid-column: span 4;
+      display: grid; gap: 18px;
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 14px; border-radius: 12px; text-decoration: none;
+      border: 1px solid var(--border); color: inherit; font-weight: 600;
+      transition: transform .08s ease, box-shadow .2s ease;
+    }
+    .pill:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+    .btnrow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .kvs { display: grid; grid-template-columns: 120px 1fr; gap: 8px 14px; margin-top: 10px; }
+    .kvs div:first-child { color: var(--muted); }
+    .muted { color: var(--muted); }
+    footer {
+      padding: 14px 20px; border-top: 1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between; gap: 10px; font-size: 13px;
+      background: color-mix(in oklab, var(--card) 80%, transparent);
+    }
+    code { padding: .1em .4em; border-radius: 8px; border: 1px solid var(--border); }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .panel, .side { grid-column: 1 / -1; }
+    }
   </style>
 </head>
 <body>
-  <h1>Rashad Shirizada</h1>
-  <p>Senior iOS Developer — Baku</p>
-  <p>Email: <a href="mailto:rashad.shirizada@gmail.com">rashad.shirizada@gmail.com</a></p>
-  <p>Phone: <a href="tel:+994503388723">+994 50 338 87 23</a></p>
-  <p>Privacy Policy: <a href="privacy.html">privacy.html</a></p>
+  <div class="wrap">
+    <main class="card" role="main">
+      <header>
+        <div class="brand">
+          <div class="logo" aria-hidden="true">🔲</div>
+          <div>
+            <h1>Simple QR Maker</h1>
+            <p class="sub">Create, Save &amp; Share QR Codes Instantly</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="grid" aria-label="Contact and links">
+        <!-- Main contact panel -->
+        <section class="panel" aria-label="Contact">
+          <h2 style="margin:0 0 6px;font-size:20px;">Contact</h2>
+          <p class="muted" style="margin:0 0 12px;">Reach the developer directly for support, partnerships, or questions.</p>
+
+          <div class="btnrow" role="group" aria-label="Primary actions">
+            <a class="pill" href="mailto:rashad.shirizada@gmail.com?subject=Simple%20QR%20Maker%20support">✉️ Email</a>
+            <a class="pill" href="tel:+994503388723">📞 Call</a>
+            <a class="pill" href="https://github.com/simpleqrmakerapp" target="_blank" rel="noopener">🌐 GitHub</a>
+            <a class="pill" href="privacy.pdf" target="_blank" rel="noopener">🔒 Privacy Policy (PDF)</a>
+          </div>
+
+          <div class="kvs">
+            <div>Developer</div><div>Rashad Shirizada</div>
+            <div>Email</div><div><a href="mailto:rashad.shirizada@gmail.com">rashad.shirizada@gmail.com</a></div>
+            <div>Phone</div><div><a href="tel:+994503388723">+994 50 338 87 23</a></div>
+            <div>Location</div><div>Baku, Azerbaijan</div>
+          </div>
+        </section>
+
+        <!-- Sidebar: app & legal -->
+        <aside class="side">
+          <section class="panel" aria-label="About the app">
+            <h3 style="margin:0 0 8px;font-size:18px;">About</h3>
+            <p class="muted" style="margin:0;">Simple, offline, and fast QR generator for Wi-Fi, links, and text. No sign-up. No tracking.</p>
+            <div class="btnrow" style="margin-top:12px">
+              <a class="pill" href="https://simpleqrmakerapp.github.io/app-ads.txt" target="_blank" rel="noopener">📄 app-ads.txt</a>
+            </div>
+          </section>
+
+          <section class="panel" aria-label="Useful links">
+            <h3 style="margin:0 0 8px;font-size:18px;">Useful Links</h3>
+            <ul style="margin:0;padding-left:18px;">
+              <li><a href="https://simpleqrmakerapp.github.io/" aria-current="page">Marketing site (this page)</a></li>
+              <li><a href="privacy.pdf" target="_blank" rel="noopener">Privacy Policy (PDF)</a></li>
+              <li><a href="app-ads.txt" target="_blank" rel="noopener">Authorized Sellers</a></li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+
+      <footer>
+        <span>© <span id="y"></span> Rashad Shirizada</span>
+        <span class="muted">All on-device • No analytics • No tracking</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
